@@ -1,0 +1,31 @@
+/*
+* На вход программы поступает номер планеты по отношению к Солнцу.
+* Выведите название планеты по ее номеру.
+*/
+
+package main
+
+import "fmt"
+
+func main() {
+    planets := [9]string{
+		"Солнышко",
+		"Меркурий",
+		"Венера",
+		"Земля",
+		"Марс",
+		"Юпитер",
+		"Сатурн",
+		"Уран",
+		"Нептун",
+	}
+    
+    var planetNumber int
+    fmt.Scan(&planetNumber)
+	
+	if 0 <= planetNumber && planetNumber < len(planets) {
+	    fmt.Println(planets[planetNumber])
+	} else {
+		fmt.Println("Planet number out of range")
+	}
+}
